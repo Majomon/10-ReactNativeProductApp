@@ -1,13 +1,22 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {Background} from '../components/Background';
-import { WhiteLogo } from '../components/WhiteLogo';
+import {WhiteLogo} from '../components/WhiteLogo';
+import {loginStyles} from '../theme/loginTheme';
+import {TextInput} from 'react-native-gesture-handler';
 
 export const LoginScreen = () => {
   return (
     <>
       <Background />
-      <WhiteLogo/>
+      <WhiteLogo />
+      <Text style={loginStyles.title}>Login</Text>
+      <Text style={loginStyles.label}>Email</Text>
+      <TextInput
+        placeholder="Ingrese su email: "
+        placeholderTextColor="rgba(255,255,255,0.4)"
+        keyboardType="email-address"
+      />
     </>
   );
 };
